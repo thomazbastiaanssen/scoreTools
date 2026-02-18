@@ -11,8 +11,9 @@ as_prop <- function(x, n, range) {
   .likert2prop(S7::S7_data(x), x@n, x@range)
 }
 
+#' @rdname as_prop
 #' @inheritParams as_prop
-#' @inheritParams logp
+#' @inheritParams base::logb
 #' @importFrom S7 S7_data
 #' @export
 #' 

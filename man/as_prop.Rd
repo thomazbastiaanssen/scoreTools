@@ -2,9 +2,12 @@
 % Please edit documentation in R/transform_likert.R
 \name{as_prop}
 \alias{as_prop}
+\alias{as_logOdds}
 \title{Utility functions to transform likert scale values to proportions & log-odds.}
 \usage{
 as_prop(x, n, range)
+
+as_logOdds(x, n, range, base)
 }
 \arguments{
 \item{x}{\verb{Numeric vector} Summed likert value to transform.}
@@ -12,6 +15,9 @@ as_prop(x, n, range)
 \item{n}{\verb{Numeric scalar} How many items were summed in \code{x}.}
 
 \item{range}{\verb{Numeric scalar} Number of possible answers in the likert scale.}
+
+\item{base}{a positive or complex number: the base with respect to which
+    logarithms are computed.  Defaults to \eqn{e}=\code{exp(1)}.}
 }
 \description{
 Utility functions to transform likert scale values to proportions & log-odds.
